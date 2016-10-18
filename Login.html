@@ -1,0 +1,27 @@
+<?php
+if(isset($_SESSION('username'])){
+	header("Location: Home.html");
+}
+?>
+
+<html>
+<center>
+	<head>
+		<title>Easy Revision </title>
+		<h2>Login</h2></br>
+	</head>
+	
+	<body>
+	
+		<form action="open.php" method="post">
+		<label>Username: </label>
+		<input type="text" name="user"><br><br>
+		<label>Password: </label>
+		<input type="password" name="password"><br><br>
+		<input type="submit" value="Login">
+		
+		</form>
+		<br><a href="Register.html">Not got an account? Sign up here</a></br>
+	</body>
+</center>
+</html>

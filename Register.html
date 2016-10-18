@@ -1,0 +1,53 @@
+<?php
+
+if(isset($_POST['register')){
+	include_once("ad_config.php");
+	
+	$firstName = $_POST['firstName'];
+	$lastName = $_POST['lastName'];
+	$username = $_POST['username'];
+	$email = $_POST['email'];
+	
+}
+	
+
+?>
+
+<html>
+<center>
+	<head>
+		<title>Register </title>
+		<h2>Sign Up</h2></br>
+	</head>
+	
+	<body>
+	<script src="regCheck.js"></script>
+	
+	<form action="registerUser.php" method="post" onsubmit="return checkForm(this);">
+	<table>
+		<tr><td>
+		<label>First Name: </label>
+		<input type="text" name="firstName" required>
+		</td></tr><tr><td>
+		<label>Last Name: </label>
+		<input type="text" name="lastName" required>
+		</td></tr><tr><td>
+		<label>Username: </label>
+		<input type="text" name="username" required>
+		</td></tr><tr><td>
+		<label>Email Address: </label>
+		<input type="email" name="email" required>
+		</td></tr><tr><td>
+		<label>Password: </label>
+		<input type="password" name="password" pattern="(.){6,}"  required>
+		<div class = "passwordVal" id="passwordMatch"></div>
+		</td></tr><tr><td>
+		<label>Re-type Password: </label>
+		<input type="text" name="passwordCheck" onChange="passwordValidation();" required>
+		</td></tr><tr><td>
+	</table>
+	<input type="submit" name="register" value="Register">
+	</form>
+	</body>
+</center>
+</html>

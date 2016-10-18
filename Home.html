@@ -1,0 +1,28 @@
+<?php
+
+echo "hello";
+	if(session_id() == '' || !isset($_SESSION)) {
+		echo "no session";
+	}else{
+		echo  $_SESSION['username'];
+	}
+	
+if(!isset($_SESSION['id']){
+	header('Location: Login.html');
+}
+?>
+
+<html>
+<center>
+	<head>
+		<title>HOME </title>
+	</head>
+	
+	
+	<body>
+	<h2>HOME PAGE</h2>
+	</body>
+</center>
+</html>
+
+
